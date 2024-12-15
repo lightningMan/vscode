@@ -136,7 +136,7 @@ const ColorManagement: React.FC = () => {
               onClick={async () => {
                 if (!selectedColor) return;
                 try {
-                  const response = await fetch(`${import.meta.env.VITE_API_URL}/colors/collections`, {
+                  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/colors/collections`, {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
