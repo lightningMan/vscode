@@ -31,6 +31,9 @@ class ColorCollectionBase(BaseModel):
 class ColorCollectionCreate(ColorCollectionBase):
     pass
 
+class ColorCollectionUpdate(ColorCollectionBase):
+    pass
+
 class ColorCollection(ColorCollectionBase):
     id: int
     user_id: int
