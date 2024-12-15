@@ -58,7 +58,10 @@ export function Auth({ onClose }: AuthProps) {
       });
 
       if (response.ok) {
-        handleLogin();
+        alert('注册成功！正在为您登录...');
+        // Add a small delay before attempting login
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await handleLogin();
       } else {
         const errorData = await response.json();
         console.error('注册失败:', errorData);
@@ -66,6 +69,7 @@ export function Auth({ onClose }: AuthProps) {
       }
     } catch (error) {
       console.error('注册出错:', error);
+      alert('网络错误，请稍后重试');
     } finally {
       setIsLoading(false);
     }
