@@ -18,3 +18,22 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: str | None = None
+
+class ColorBase(BaseModel):
+    hex_value: str
+    name: str | None = None
+
+class ColorCollectionBase(BaseModel):
+    name: str
+    tags: list[str] = []
+    colors: list[str] = []
+
+class ColorCollectionCreate(ColorCollectionBase):
+    pass
+
+class ColorCollection(ColorCollectionBase):
+    id: int
+    user_id: int
+
+    class Config:
+        from_attributes = True
