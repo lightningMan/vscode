@@ -136,7 +136,7 @@ const ColorManagement: React.FC = () => {
               onClick={async () => {
                 if (!selectedColor) return;
                 try {
-                  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/colors/collections`, {
+                  const response = await fetch(`${import.meta.env.VITE_API_URL}/colors/collections`, {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
@@ -147,9 +147,14 @@ const ColorManagement: React.FC = () => {
                   if (response.ok) {
                     const data = await response.json();
                     dispatch(addColorCollection(data));
+                    alert('颜色配置创建成功！');
+                  } else {
+                    const errorData = await response.json();
+                    alert('创建失败: ' + (errorData.detail || '请稍后重试'));
                   }
                 } catch (error) {
                   console.error('Failed to create color collection:', error);
+                  alert('创建失败：网络错误，请稍后重试');
                 }
               }}
               style={selectedColor ? {
