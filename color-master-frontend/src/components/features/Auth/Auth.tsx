@@ -16,7 +16,7 @@ export function Auth({ onClose }: AuthProps) {
   const handleLogin = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/token`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/token`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -46,7 +46,7 @@ export function Auth({ onClose }: AuthProps) {
   const handleRegister = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
