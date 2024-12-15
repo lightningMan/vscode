@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply bg-background text-foreground;
+}
+
+/* Magnifier styles */
+.magnifier {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 0 0 6px rgba(0, 0, 0, 0.2);
+  background-size: auto 800%;
+  background-repeat: no-repeat;
+}
+
+/* Animation utilities */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+
+  .magnifier {
+    @apply hidden;
+  }
+}

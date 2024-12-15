@@ -1,0 +1,57 @@
+// 中文翻译文本
+export const zhCN = {
+  common: {
+    confirm: '确认',
+    cancel: '取消',
+    save: '保存',
+    delete: '删除',
+    edit: '编辑',
+    upload: '上传',
+    download: '下载',
+    import: '导入',
+    export: '导出',
+  },
+  colorPicker: {
+    title: '取色工具',
+    uploadImage: '上传图片',
+    dragDropHint: '拖拽图片到此处或点击上传',
+    dragDropTooltip: '支持JPG、PNG格式图片',
+    recentColors: '最近使用的颜色',
+    hex: '十六进制',
+    rgb: 'RGB',
+    hsl: 'HSL',
+    colorTooltip: '点击使用此颜色',
+  },
+  colorManagement: {
+    title: '颜色管理',
+    collections: '颜色集合',
+    createCollection: '创建新集合',
+    addColor: '添加颜色',
+    tags: '标签',
+    categories: '分类',
+    importTooltip: '导入颜色方案',
+    exportTooltip: '导出颜色方案',
+    createTooltip: '创建新的颜色集合',
+  },
+  colorDecomposition: {
+    title: '颜色分解',
+    mixture: '混合比例',
+    recommendations: '推荐组合',
+    matching: '匹配结果',
+    noColorSelected: '请先选择一个颜色',
+    mixingTooltip: '颜色混合建议',
+  },
+  tutorial: {
+    welcome: '欢迎使用颜色管理大师',
+    quickStart: '快速开始使用颜色管理大师',
+    basics: '基础操作',
+    advanced: '高级功能',
+    steps: [
+      '上传或拖拽图片到取色区域',
+      '点击图片上的任意位置选取颜色',
+      '使用放大镜功能精确选择颜色',
+      '查看颜色的详细信息和混合建议',
+      '创建和管理您的颜色集合',
+    ],
+  }
+};
