@@ -1,3 +1,3 @@
-from . import auth, models, color_processing, database
+from . import auth, models, color_processing, database, schemas
 
-__all__ = ['auth', 'models', 'color_processing', 'database']
+__all__ = ['auth', 'models', 'color_processing', 'database', 'schemas']
